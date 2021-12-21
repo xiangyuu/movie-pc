@@ -28,9 +28,9 @@ import dog12 from '../../static/imgs/dog12.jpg'
 import customer01 from '../../static/imgs/customer01.jpg'
 import customer02 from '../../static/imgs/customer02.jpg'
 import customer03 from '../../static/imgs/customer03.jpg'
-import ad01 from '../../static/imgs/ad01.jpg'
-import ad02 from '../../static/imgs/ad02.jpg'
-import ad03 from '../../static/imgs/ad03.jpg'
+import ad01 from '../../static/imgs/advertise01.jpg'
+import ad02 from '../../static/imgs/advertise02.jpg'
+import ad03 from '../../static/imgs/advertise03.jpg'
 
 function Home() {
   let ensureAry = [
@@ -160,7 +160,7 @@ function Home() {
             <span>萌犬實拍影片</span>
             <a href='https://www.youtube.com/channel/UC0hqSH4NfyMifJmijsfrHDw'>觀看更多影片</a>
           </div>
-          <iframe allow="autoplay" width='100%' height='100%' frameBorder="0"
+          <iframe className='iframe' allow="autoplay" width='100%'  frameBorder="0"
                   src='https://www.youtube.com/embed/Ov0rlihBxMA?enablejsapi=1&origin=http%3A%2F%2Fwww.petshoptw.com'></iframe>
 
         </div>
@@ -183,6 +183,21 @@ function Home() {
             })}
           </Carousel>
 
+        </div>
+      </div>
+      <div className='advertise-panel'>
+        <div className='left-card'>
+            <img src={ad01}/>
+            <div>
+              <p>寵物是家裡最棒的醫生</p>
+              <span>情緒方面，可以減少抑鬱、焦慮和緊張，常用於心理治療。</span>
+              <span>健康方面，可以降低血壓，提高免疫力，降低疾病發生率。</span>
+            </div>
+        </div>
+        <div className='right-card'>
+          <div>
+            
+          </div>
         </div>
       </div>
     </div>
