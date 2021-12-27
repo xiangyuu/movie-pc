@@ -18,10 +18,10 @@ function App() {
   ]
   return (
     <div className="App">
-      <div className='h-20 z-10 fixed top-0 inset-x-0 nav flex justify-around  items-center bg-red-100 '>
+      <div className='select-none h-20 z-10 fixed top-0 inset-x-0 nav flex justify-around  items-center bg-red-100 '>
         <div className='flex items-center'>
           <Link className='origin-center hover:origin-top logo w-20' to='/'><img className='w-full' src={logo} alt='圖片無法顯示'/></Link>
-          <div className='ml-3 font-bold'>漁夫寵物店</div>
+          <Link className='ml-3 font-bold' to='/'>漁夫寵物店</Link>
         </div>
         <div className='items'>
           <div className='justify-between flex-col flex-auto '>

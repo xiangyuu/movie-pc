@@ -31,6 +31,9 @@ import customer03 from '../../static/imgs/customer03.jpg'
 import ad01 from '../../static/imgs/advertise01.jpg'
 import ad02 from '../../static/imgs/advertise02.jpg'
 import ad03 from '../../static/imgs/advertise03.jpg'
+import Fall from '../../components/fall'
+import Footer from "../../components/footer";
+
 
 function Home() {
   let ensureAry = [
@@ -65,24 +68,11 @@ function Home() {
       content2: '售後服務安全又可靠'
     },
   ]
-  let fallAry = [
-    {name: '柴犬寶寶', img: dog01},
-    {name: '柴犬寶寶', img: dog02},
-    {name: '柴犬寶寶', img: dog03},
-    {name: '柴犬寶寶', img: dog04},
-    {name: '柴犬寶寶', img: dog05},
-    {name: '博美寶寶', img: dog06},
-    {name: '博美寶寶', img: dog07},
-    {name: '博美寶寶', img: dog08},
-    {name: '博美寶寶', img: dog09},
-    {name: '博美寶寶', img: dog10},
-    {name: '柴犬寶寶', img: dog11},
-    {name: '柴犬寶寶', img: dog12},
 
-  ]
   let customerAry = [customer01, customer02, customer03]
   return (
     <div className='home'>
+
       <Carousel showArrows={false} showThumbs={false} showIndicators={false} showStatus={false} autoPlay={true}
                 infiniteLoop={true}
                 interval={4000}>
@@ -136,31 +126,14 @@ function Home() {
           )
         })}
       </div>
-      <div className='fall-panel'>
-        <div className='title'>
-          <p>萌犬介紹</p>
-          <span>特寵業字第A1070580號</span>
-          <div><img src={redFootPrint}/>DOGS<img src={redFootPrint}/></div>
-        </div>
-        <div className='body'>
-          {fallAry.map((obj, key) => {
-            return (
-              <div key={key} className='card'>
-                <div><img src={obj.img}/></div>
-                <span>{obj.name}</span>
-              </div>
-            )
-          })}
-        </div>
-        <span>更多萌照</span>
-      </div>
+      <Fall more={true} isFilter={false}/>
       <div className='advertise-panel'>
         <div className='video-card'>
           <div>
             <span>萌犬實拍影片</span>
             <a href='https://www.youtube.com/channel/UC0hqSH4NfyMifJmijsfrHDw'>觀看更多影片</a>
           </div>
-          <iframe className='iframe' allow="autoplay" width='100%'  frameBorder="0"
+          <iframe className='iframe' allow="autoplay" width='100%' frameBorder="0"
                   src='https://www.youtube.com/embed/Ov0rlihBxMA?enablejsapi=1&origin=http%3A%2F%2Fwww.petshoptw.com'></iframe>
 
         </div>
@@ -187,19 +160,38 @@ function Home() {
       </div>
       <div className='advertise-panel'>
         <div className='left-card'>
-            <img src={ad01}/>
-            <div>
-              <p>寵物是家裡最棒的醫生</p>
-              <span>情緒方面，可以減少抑鬱、焦慮和緊張，常用於心理治療。</span>
-              <span>健康方面，可以降低血壓，提高免疫力，降低疾病發生率。</span>
-            </div>
+          <img src={ad01}/>
+          <div>
+            <p>寵物是家裡最棒的醫生</p>
+            <span>情緒方面，可以減少抑鬱、焦慮和緊張，常用於心理治療。</span>
+            <span>健康方面，可以降低血壓，提高免疫力，降低疾病發生率。</span>
+          </div>
         </div>
         <div className='right-card'>
           <div>
-            
+            <span>
+               <p>貓狗有益高齡者身心健康</p>
+              心靈層面可減少老人家的孤獨感。<br/>
+              生理層面增加運動頻率更加健康。<br/>
+              改善抑鬱的心情，甚至減輕病痛。<br/>
+              有助獨居老人意外發生時的提醒。<br/>
+            </span>
+            <img src={ad02}/>
+          </div>
+          <div>
+            <img src={ad03}/>
+
+            <span>
+              <p>貓狗陪伴的小孩更健全</p>
+              增進小孩的自我表達能力。<br/>
+              激發小孩活潑及好奇的天性。<br/>
+              提升小孩的抗壓力及社交能力。<br/>
+              培養小孩的專注力、責任感及同理心。<br/>
+            </span>
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
